@@ -228,32 +228,32 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .pokemonOffset = 1,
         .trainerScale = 296,
         .trainerOffset = 1,
-        .frontPic = gMonFrontPic_DecidueyeHisui,
+        .frontPic = gMonFrontPic_DecidueyeHisuian,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = sAnims_DecidueyeHisui,
+        .frontAnimFrames = sAnims_DecidueyeHisuian,
         //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        .backPic = gMonBackPic_DecidueyeHisui,
+        .backPic = gMonBackPic_DecidueyeHisuian,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 0,
         //.backAnimId = BACK_ANIM_NONE,
-        .palette = gMonPalette_DecidueyeHisui,
-        .shinyPalette = gMonShinyPalette_DecidueyeHisui,
-        .iconSprite = gMonIcon_DecidueyeHisui,
+        .palette = gMonPalette_DecidueyeHisuian,
+        .shinyPalette = gMonShinyPalette_DecidueyeHisuian,
+        .iconSprite = gMonIcon_DecidueyeHisuian,
         .iconPalIndex = 0,
         SHADOW(-1, 14, SHADOW_SIZE_L)
         FOOTPRINT(Decidueye)
         OVERWORLD(
-            sPicTable_DecidueyeHisui,
+            sPicTable_DecidueyeHisuian,
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_FOOT,
-            gOverworldPalette_DecidueyeHisui,
-            gShinyOverworldPalette_DecidueyeHisui
+            gOverworldPalette_DecidueyeHisuian,
+            gShinyOverworldPalette_DecidueyeHisuian
         )
         .isHisuianForm = TRUE,
-        .levelUpLearnset = sDecidueyeHisuiLevelUpLearnset,
-        .teachableLearnset = sDecidueyeHisuiTeachableLearnset,
+        .levelUpLearnset = sDecidueyeHisuianLevelUpLearnset,
+        .teachableLearnset = sDecidueyeHisuianTeachableLearnset,
         .formSpeciesIdTable = sDecidueyeFormSpeciesIdTable,
     },
 #endif //P_HISUIAN_FORMS
@@ -948,6 +948,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .levelUpLearnset = sGumshoosLevelUpLearnset,
         .teachableLearnset = sGumshoosTeachableLearnset,
         .formSpeciesIdTable = sGumshoosFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_GUMSHOOS_TOTEM] =
@@ -1009,6 +1010,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .levelUpLearnset = sGumshoosLevelUpLearnset,
         .teachableLearnset = sGumshoosTeachableLearnset,
         .formSpeciesIdTable = sGumshoosFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_YUNGOOS
 
@@ -1259,6 +1261,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .levelUpLearnset = sVikavoltLevelUpLearnset,
         .teachableLearnset = sVikavoltTeachableLearnset,
         .formSpeciesIdTable = sVikavoltFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_GRUBBIN
 
@@ -1455,6 +1458,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .eggMoveLearnset = sOricorioEggMoveLearnset,
         .formSpeciesIdTable = sOricorioFormSpeciesIdTable,
         .formChangeTable = sOricorioFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_RANDOM_FORM,
     },
 
     [SPECIES_ORICORIO_POM_POM] =
@@ -1520,6 +1524,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .eggMoveLearnset = sOricorioEggMoveLearnset,
         .formSpeciesIdTable = sOricorioFormSpeciesIdTable,
         .formChangeTable = sOricorioFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_ORICORIO_PAU] =
@@ -1585,6 +1590,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .eggMoveLearnset = sOricorioEggMoveLearnset,
         .formSpeciesIdTable = sOricorioFormSpeciesIdTable,
         .formChangeTable = sOricorioFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_ORICORIO_SENSU] =
@@ -1650,6 +1656,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .eggMoveLearnset = sOricorioEggMoveLearnset,
         .formSpeciesIdTable = sOricorioFormSpeciesIdTable,
         .formChangeTable = sOricorioFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_ORICORIO
 
@@ -1840,6 +1847,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .levelUpLearnset = sRibombeeLevelUpLearnset,
         .teachableLearnset = sRibombeeTeachableLearnset,
         .formSpeciesIdTable = sRibombeeFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_CUTIEFLY
 
@@ -1903,6 +1911,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .formSpeciesIdTable = sRockruffFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_LEVEL_DAY, 25, SPECIES_LYCANROC_MIDDAY},
                                 {EVO_LEVEL_NIGHT, 25, SPECIES_LYCANROC_MIDNIGHT}),
+        .randomizerMode = MON_RANDOMIZER_RANDOM_FORM,
     },
 
     [SPECIES_ROCKRUFF_OWN_TEMPO] =
@@ -1963,6 +1972,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .eggMoveLearnset = sRockruffEggMoveLearnset,
         .formSpeciesIdTable = sRockruffFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_LEVEL_DUSK, 25, SPECIES_LYCANROC_DUSK}),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_LYCANROC_MIDDAY] =
@@ -2025,6 +2035,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .levelUpLearnset = sLycanrocMiddayLevelUpLearnset,
         .teachableLearnset = sLycanrocMiddayTeachableLearnset,
         .formSpeciesIdTable = sLycanrocFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_RANDOM_FORM,
     },
 
     [SPECIES_LYCANROC_MIDNIGHT] =
@@ -2087,6 +2098,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .levelUpLearnset = sLycanrocMidnightLevelUpLearnset,
         .teachableLearnset = sLycanrocMidnightTeachableLearnset,
         .formSpeciesIdTable = sLycanrocFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_LYCANROC_DUSK] =
@@ -2149,6 +2161,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .levelUpLearnset = sLycanrocDuskLevelUpLearnset,
         .teachableLearnset = sLycanrocDuskTeachableLearnset,
         .formSpeciesIdTable = sLycanrocFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_ROCKRUFF
 
@@ -2216,6 +2229,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .eggMoveLearnset = sWishiwashiEggMoveLearnset,
         .formSpeciesIdTable = sWishiwashiFormSpeciesIdTable,
         .formChangeTable = sWishiwashiFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_WISHIWASHI_SCHOOL] =
@@ -2715,6 +2729,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .levelUpLearnset = sAraquanidLevelUpLearnset,
         .teachableLearnset = sAraquanidTeachableLearnset,
         .formSpeciesIdTable = sAraquanidFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_DEWPIDER
 
@@ -2902,6 +2917,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .levelUpLearnset = sLurantisLevelUpLearnset,
         .teachableLearnset = sLurantisTeachableLearnset,
         .formSpeciesIdTable = sLurantisFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_FOMANTIS
 
@@ -3219,6 +3235,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .levelUpLearnset = sSalazzleLevelUpLearnset,
         .teachableLearnset = sSalazzleTeachableLearnset,
         .formSpeciesIdTable = sSalanditFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_SALANDIT
 
@@ -4180,6 +4197,9 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .teachableLearnset = sSilvallyTeachableLearnset,                            \
         .formSpeciesIdTable = sSilvallyFormSpeciesIdTable,                          \
         .formChangeTable = sSilvallyFormChangeTable,                                \
+        .randomizerMode = (type == TYPE_NORMAL                                      \
+            ? MON_RANDOMIZER_NORMAL                                                 \
+            : MON_RANDOMIZER_INVALID),                                              \
     }
 
     [SPECIES_SILVALLY_NORMAL]   = SILVALLY_SPECIES_INFO(TYPE_NORMAL,   Normal),
@@ -4564,6 +4584,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .teachableLearnset = sTogedemaruTeachableLearnset,
         .eggMoveLearnset = sTogedemaruEggMoveLearnset,
         .formSpeciesIdTable = sTogedemaruFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_TOGEDEMARU
 
@@ -4680,6 +4701,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .eggMoveLearnset = sMimikyuEggMoveLearnset,
         .formSpeciesIdTable = sMimikyuFormSpeciesIdTable,
         .formChangeTable = sMimikyuFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_MIMIKYU_TOTEM_DISGUISED] =
@@ -4743,6 +4765,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .eggMoveLearnset = sMimikyuEggMoveLearnset,
         .formSpeciesIdTable = sMimikyuFormSpeciesIdTable,
         .formChangeTable = sMimikyuTotemFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_MIMIKYU_BUSTED_TOTEM] =
@@ -4798,6 +4821,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .eggMoveLearnset = sMimikyuEggMoveLearnset,
         .formSpeciesIdTable = sMimikyuFormSpeciesIdTable,
         .formChangeTable = sMimikyuTotemFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_MIMIKYU
 
@@ -5243,6 +5267,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .levelUpLearnset = sKommoOLevelUpLearnset,
         .teachableLearnset = sKommoOTeachableLearnset,
         .formSpeciesIdTable = sKommoOFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_JANGMO_O
 
@@ -5493,7 +5518,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .palette = gMonPalette_TapuFini,
         .shinyPalette = gMonShinyPalette_TapuFini,
         .iconSprite = gMonIcon_TapuFini,
-        .iconPalIndex = 2,
+        .iconPalIndex = 0,
         SHADOW(1, 15, SHADOW_SIZE_M)
         FOOTPRINT(TapuFini)
         OVERWORLD(
@@ -5694,7 +5719,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .palette = gMonPalette_Solgaleo,
         .shinyPalette = gMonShinyPalette_Solgaleo,
         .iconSprite = gMonIcon_Solgaleo,
-        .iconPalIndex = 2,
+        .iconPalIndex = 0,
         SHADOW(-1, 11, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(Solgaleo)
         OVERWORLD(
@@ -5826,7 +5851,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .palette = gMonPalette_Nihilego,
         .shinyPalette = gMonShinyPalette_Nihilego,
         .iconSprite = gMonIcon_Nihilego,
-        .iconPalIndex = 2,
+        .iconPalIndex = 0,
         SHADOW(-2, 14, SHADOW_SIZE_S)
         FOOTPRINT(Nihilego)
         OVERWORLD(
@@ -6220,7 +6245,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .palette = gMonPalette_Guzzlord,
         .shinyPalette = gMonShinyPalette_Guzzlord,
         .iconSprite = gMonIcon_Guzzlord,
-        .iconPalIndex = 2,
+        .iconPalIndex = 0,
         SHADOW(4, 10, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(Guzzlord)
         OVERWORLD(
@@ -6288,7 +6313,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .palette = gMonPalette_Necrozma,
         .shinyPalette = gMonShinyPalette_Necrozma,
         .iconSprite = gMonIcon_Necrozma,
-        .iconPalIndex = 1,
+        .iconPalIndex = 0,
         SHADOW(-1, 15, SHADOW_SIZE_M)
         FOOTPRINT(Necrozma)
         OVERWORLD(
@@ -6374,6 +6399,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .teachableLearnset = sNecrozmaTeachableLearnset,
         .formSpeciesIdTable = sNecrozmaFormSpeciesIdTable,
         .formChangeTable = sNecrozmaDuskManeFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_NECROZMA_DAWN_WINGS] =
@@ -6443,6 +6469,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .teachableLearnset = sNecrozmaTeachableLearnset,
         .formSpeciesIdTable = sNecrozmaFormSpeciesIdTable,
         .formChangeTable = sNecrozmaDawnWingsFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
 #if P_ULTRA_BURST_FORMS
@@ -6507,6 +6534,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .levelUpLearnset = sNecrozmaLevelUpLearnset,
         .teachableLearnset = sNecrozmaTeachableLearnset,
         .formSpeciesIdTable = sNecrozmaFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_ULTRA_BURST_FORMS
 #endif //P_FUSION_FORMS
@@ -6576,6 +6604,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .levelUpLearnset = sMagearnaLevelUpLearnset,
         .teachableLearnset = sMagearnaTeachableLearnset,
         .formSpeciesIdTable = sMagearnaFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_RANDOM_FORM,
     },
     [SPECIES_MAGEARNA_ORIGINAL] =
     {
@@ -6611,28 +6640,28 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .pokemonOffset = 7,
         .trainerScale = 257,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_MagearnaOriginal,
+        .frontPic = gMonFrontPic_MagearnaOriginalColor,
         .frontPicSize = MON_COORDS_SIZE(56, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = sAnims_Magearna,
         .frontAnimId = ANIM_H_SLIDE_SLOW,
-        .backPic = gMonBackPic_MagearnaOriginal,
+        .backPic = gMonBackPic_MagearnaOriginalColor,
         .backPicSize = MON_COORDS_SIZE(64, 56),
         .backPicYOffset = 4,
         /*.backAnimId = BACK_ANIM_NONE,*/
-        .palette = gMonPalette_MagearnaOriginal,
-        .shinyPalette = gMonShinyPalette_MagearnaOriginal,
-        .iconSprite = gMonIcon_MagearnaOriginal,
+        .palette = gMonPalette_MagearnaOriginalColor,
+        .shinyPalette = gMonShinyPalette_MagearnaOriginalColor,
+        .iconSprite = gMonIcon_MagearnaOriginalColor,
         .iconPalIndex = 0,
         SHADOW(-2, 14, SHADOW_SIZE_M)
         FOOTPRINT(Magearna)
         OVERWORLD(
-            sPicTable_MagearnaOriginal,
+            sPicTable_MagearnaOriginalColor,
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_FOOT,
-            gOverworldPalette_MagearnaOriginal,
-            gShinyOverworldPalette_MagearnaOriginal
+            gOverworldPalette_MagearnaOriginalColor,
+            gShinyOverworldPalette_MagearnaOriginalColor
         )
         .isMythical = TRUE,
         .isFrontierBanned = TRUE,
@@ -6640,6 +6669,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .levelUpLearnset = sMagearnaLevelUpLearnset,
         .teachableLearnset = sMagearnaTeachableLearnset,
         .formSpeciesIdTable = sMagearnaFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_MAGEARNA
 
@@ -7199,18 +7229,18 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .pokemonOffset = 10,
         .trainerScale = 423,
         .trainerOffset = 8,
-        .frontPic = gMonFrontPic_MelmetalGmax,
+        .frontPic = gMonFrontPic_MelmetalGigantamax,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 1,
-        .frontAnimFrames = sAnims_MelmetalGmax,
+        .frontAnimFrames = sAnims_MelmetalGigantamax,
         //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        .backPic = gMonBackPic_MelmetalGmax,
+        .backPic = gMonBackPic_MelmetalGigantamax,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 14,
         //.backAnimId = BACK_ANIM_NONE,
-        .palette = gMonPalette_MelmetalGmax,
-        .shinyPalette = gMonShinyPalette_MelmetalGmax,
-        .iconSprite = gMonIcon_MelmetalGmax,
+        .palette = gMonPalette_MelmetalGigantamax,
+        .shinyPalette = gMonShinyPalette_MelmetalGigantamax,
+        .iconSprite = gMonIcon_MelmetalGigantamax,
         .iconPalIndex = 0,
         SHADOW(2, 13, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(Melmetal)
@@ -7222,6 +7252,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .teachableLearnset = sMelmetalTeachableLearnset,
         .formSpeciesIdTable = sMelmetalFormSpeciesIdTable,
         .formChangeTable = sMelmetalFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_GIGANTAMAX_FORMS
 #endif //P_FAMILY_MELTAN

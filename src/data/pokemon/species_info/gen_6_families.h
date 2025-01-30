@@ -622,6 +622,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .teachableLearnset = sGreninjaTeachableLearnset,
         .formSpeciesIdTable = sGreninjaFormSpeciesIdTable,
         .formChangeTable = sGreninjaBattleBondFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID
     },
 
     [SPECIES_GRENINJA_ASH] =
@@ -674,6 +675,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .teachableLearnset = sGreninjaTeachableLearnset,
         .formSpeciesIdTable = sGreninjaFormSpeciesIdTable,
         .formChangeTable = sGreninjaBattleBondFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID
     },
 #endif //P_FAMILY_FROAKIE
 
@@ -994,7 +996,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
 #endif //P_FAMILY_FLETCHLING
 
 #if P_FAMILY_SCATTERBUG
-#define SCATTERBUG_SPECIES_INFO(evolution)                                                  \
+#define SCATTERBUG_SPECIES_INFO(evolution, rzMode)                                          \
     {                                                                                       \
         .baseHP        = 38,                                                                \
         .baseAttack    = 35,                                                                \
@@ -1053,30 +1055,31 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .eggMoveLearnset = sScatterbugEggMoveLearnset,                                      \
         .formSpeciesIdTable = sScatterbugFormSpeciesIdTable,                                \
         .evolutions = EVOLUTION({EVO_LEVEL, 9, SPECIES_SPEWPA_##evolution}),                \
+        .randomizerMode = rzMode,                                                           \
     }                                                                                       \
 
-    [SPECIES_SCATTERBUG_ICY_SNOW]    = SCATTERBUG_SPECIES_INFO(ICY_SNOW),
-    [SPECIES_SCATTERBUG_POLAR]       = SCATTERBUG_SPECIES_INFO(POLAR),
-    [SPECIES_SCATTERBUG_TUNDRA]      = SCATTERBUG_SPECIES_INFO(TUNDRA),
-    [SPECIES_SCATTERBUG_CONTINENTAL] = SCATTERBUG_SPECIES_INFO(CONTINENTAL),
-    [SPECIES_SCATTERBUG_GARDEN]      = SCATTERBUG_SPECIES_INFO(GARDEN),
-    [SPECIES_SCATTERBUG_ELEGANT]     = SCATTERBUG_SPECIES_INFO(ELEGANT),
-    [SPECIES_SCATTERBUG_MEADOW]      = SCATTERBUG_SPECIES_INFO(MEADOW),
-    [SPECIES_SCATTERBUG_MODERN]      = SCATTERBUG_SPECIES_INFO(MODERN),
-    [SPECIES_SCATTERBUG_MARINE]      = SCATTERBUG_SPECIES_INFO(MARINE),
-    [SPECIES_SCATTERBUG_ARCHIPELAGO] = SCATTERBUG_SPECIES_INFO(ARCHIPELAGO),
-    [SPECIES_SCATTERBUG_HIGH_PLAINS] = SCATTERBUG_SPECIES_INFO(HIGH_PLAINS),
-    [SPECIES_SCATTERBUG_SANDSTORM]   = SCATTERBUG_SPECIES_INFO(SANDSTORM),
-    [SPECIES_SCATTERBUG_RIVER]       = SCATTERBUG_SPECIES_INFO(RIVER),
-    [SPECIES_SCATTERBUG_MONSOON]     = SCATTERBUG_SPECIES_INFO(MONSOON),
-    [SPECIES_SCATTERBUG_SAVANNA]     = SCATTERBUG_SPECIES_INFO(SAVANNA),
-    [SPECIES_SCATTERBUG_SUN]         = SCATTERBUG_SPECIES_INFO(SUN),
-    [SPECIES_SCATTERBUG_OCEAN]       = SCATTERBUG_SPECIES_INFO(OCEAN),
-    [SPECIES_SCATTERBUG_JUNGLE]      = SCATTERBUG_SPECIES_INFO(JUNGLE),
-    [SPECIES_SCATTERBUG_FANCY]       = SCATTERBUG_SPECIES_INFO(FANCY),
-    [SPECIES_SCATTERBUG_POKEBALL]   = SCATTERBUG_SPECIES_INFO(POKEBALL),
+    [SPECIES_SCATTERBUG_ICY_SNOW]    = SCATTERBUG_SPECIES_INFO(ICY_SNOW, MON_RANDOMIZER_RANDOM_FORM),
+    [SPECIES_SCATTERBUG_POLAR]       = SCATTERBUG_SPECIES_INFO(POLAR, MON_RANDOMIZER_INVALID),
+    [SPECIES_SCATTERBUG_TUNDRA]      = SCATTERBUG_SPECIES_INFO(TUNDRA, MON_RANDOMIZER_INVALID),
+    [SPECIES_SCATTERBUG_CONTINENTAL] = SCATTERBUG_SPECIES_INFO(CONTINENTAL, MON_RANDOMIZER_INVALID),
+    [SPECIES_SCATTERBUG_GARDEN]      = SCATTERBUG_SPECIES_INFO(GARDEN, MON_RANDOMIZER_INVALID),
+    [SPECIES_SCATTERBUG_ELEGANT]     = SCATTERBUG_SPECIES_INFO(ELEGANT, MON_RANDOMIZER_INVALID),
+    [SPECIES_SCATTERBUG_MEADOW]      = SCATTERBUG_SPECIES_INFO(MEADOW, MON_RANDOMIZER_INVALID),
+    [SPECIES_SCATTERBUG_MODERN]      = SCATTERBUG_SPECIES_INFO(MODERN, MON_RANDOMIZER_INVALID),
+    [SPECIES_SCATTERBUG_MARINE]      = SCATTERBUG_SPECIES_INFO(MARINE, MON_RANDOMIZER_INVALID),
+    [SPECIES_SCATTERBUG_ARCHIPELAGO] = SCATTERBUG_SPECIES_INFO(ARCHIPELAGO, MON_RANDOMIZER_INVALID),
+    [SPECIES_SCATTERBUG_HIGH_PLAINS] = SCATTERBUG_SPECIES_INFO(HIGH_PLAINS, MON_RANDOMIZER_INVALID),
+    [SPECIES_SCATTERBUG_SANDSTORM]   = SCATTERBUG_SPECIES_INFO(SANDSTORM, MON_RANDOMIZER_INVALID),
+    [SPECIES_SCATTERBUG_RIVER]       = SCATTERBUG_SPECIES_INFO(RIVER, MON_RANDOMIZER_INVALID),
+    [SPECIES_SCATTERBUG_MONSOON]     = SCATTERBUG_SPECIES_INFO(MONSOON, MON_RANDOMIZER_INVALID),
+    [SPECIES_SCATTERBUG_SAVANNA]     = SCATTERBUG_SPECIES_INFO(SAVANNA, MON_RANDOMIZER_INVALID),
+    [SPECIES_SCATTERBUG_SUN]         = SCATTERBUG_SPECIES_INFO(SUN, MON_RANDOMIZER_INVALID),
+    [SPECIES_SCATTERBUG_OCEAN]       = SCATTERBUG_SPECIES_INFO(OCEAN, MON_RANDOMIZER_INVALID),
+    [SPECIES_SCATTERBUG_JUNGLE]      = SCATTERBUG_SPECIES_INFO(JUNGLE, MON_RANDOMIZER_INVALID),
+    [SPECIES_SCATTERBUG_FANCY]       = SCATTERBUG_SPECIES_INFO(FANCY, MON_RANDOMIZER_INVALID),
+    [SPECIES_SCATTERBUG_POKEBALL]    = SCATTERBUG_SPECIES_INFO(POKEBALL, MON_RANDOMIZER_INVALID),
 
-#define SPEWPA_SPECIES_INFO(evolution)                                          \
+#define SPEWPA_SPECIES_INFO(evolution, rzMode)                                  \
     {                                                                           \
         .baseHP        = 45,                                                    \
         .baseAttack    = 22,                                                    \
@@ -1134,28 +1137,29 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .teachableLearnset = sSpewpaTeachableLearnset,                          \
         .formSpeciesIdTable = sSpewpaFormSpeciesIdTable,                        \
         .evolutions = EVOLUTION({EVO_LEVEL, 12, SPECIES_VIVILLON_##evolution}), \
+        .randomizerMode = rzMode,                                               \
     }
 
-    [SPECIES_SPEWPA_ICY_SNOW]    = SPEWPA_SPECIES_INFO(ICY_SNOW),
-    [SPECIES_SPEWPA_POLAR]       = SPEWPA_SPECIES_INFO(POLAR),
-    [SPECIES_SPEWPA_TUNDRA]      = SPEWPA_SPECIES_INFO(TUNDRA),
-    [SPECIES_SPEWPA_CONTINENTAL] = SPEWPA_SPECIES_INFO(CONTINENTAL),
-    [SPECIES_SPEWPA_GARDEN]      = SPEWPA_SPECIES_INFO(GARDEN),
-    [SPECIES_SPEWPA_ELEGANT]     = SPEWPA_SPECIES_INFO(ELEGANT),
-    [SPECIES_SPEWPA_MEADOW]      = SPEWPA_SPECIES_INFO(MEADOW),
-    [SPECIES_SPEWPA_MODERN]      = SPEWPA_SPECIES_INFO(MODERN),
-    [SPECIES_SPEWPA_MARINE]      = SPEWPA_SPECIES_INFO(MARINE),
-    [SPECIES_SPEWPA_ARCHIPELAGO] = SPEWPA_SPECIES_INFO(ARCHIPELAGO),
-    [SPECIES_SPEWPA_HIGH_PLAINS] = SPEWPA_SPECIES_INFO(HIGH_PLAINS),
-    [SPECIES_SPEWPA_SANDSTORM]   = SPEWPA_SPECIES_INFO(SANDSTORM),
-    [SPECIES_SPEWPA_RIVER]       = SPEWPA_SPECIES_INFO(RIVER),
-    [SPECIES_SPEWPA_MONSOON]     = SPEWPA_SPECIES_INFO(MONSOON),
-    [SPECIES_SPEWPA_SAVANNA]     = SPEWPA_SPECIES_INFO(SAVANNA),
-    [SPECIES_SPEWPA_SUN]         = SPEWPA_SPECIES_INFO(SUN),
-    [SPECIES_SPEWPA_OCEAN]       = SPEWPA_SPECIES_INFO(OCEAN),
-    [SPECIES_SPEWPA_JUNGLE]      = SPEWPA_SPECIES_INFO(JUNGLE),
-    [SPECIES_SPEWPA_FANCY]       = SPEWPA_SPECIES_INFO(FANCY),
-    [SPECIES_SPEWPA_POKEBALL]   = SPEWPA_SPECIES_INFO(POKEBALL),
+    [SPECIES_SPEWPA_ICY_SNOW]    = SPEWPA_SPECIES_INFO(ICY_SNOW, MON_RANDOMIZER_RANDOM_FORM),
+    [SPECIES_SPEWPA_POLAR]       = SPEWPA_SPECIES_INFO(POLAR, MON_RANDOMIZER_INVALID),
+    [SPECIES_SPEWPA_TUNDRA]      = SPEWPA_SPECIES_INFO(TUNDRA, MON_RANDOMIZER_INVALID),
+    [SPECIES_SPEWPA_CONTINENTAL] = SPEWPA_SPECIES_INFO(CONTINENTAL, MON_RANDOMIZER_INVALID),
+    [SPECIES_SPEWPA_GARDEN]      = SPEWPA_SPECIES_INFO(GARDEN, MON_RANDOMIZER_INVALID),
+    [SPECIES_SPEWPA_ELEGANT]     = SPEWPA_SPECIES_INFO(ELEGANT, MON_RANDOMIZER_INVALID),
+    [SPECIES_SPEWPA_MEADOW]      = SPEWPA_SPECIES_INFO(MEADOW, MON_RANDOMIZER_INVALID),
+    [SPECIES_SPEWPA_MODERN]      = SPEWPA_SPECIES_INFO(MODERN, MON_RANDOMIZER_INVALID),
+    [SPECIES_SPEWPA_MARINE]      = SPEWPA_SPECIES_INFO(MARINE, MON_RANDOMIZER_INVALID),
+    [SPECIES_SPEWPA_ARCHIPELAGO] = SPEWPA_SPECIES_INFO(ARCHIPELAGO, MON_RANDOMIZER_INVALID),
+    [SPECIES_SPEWPA_HIGH_PLAINS] = SPEWPA_SPECIES_INFO(HIGH_PLAINS, MON_RANDOMIZER_INVALID),
+    [SPECIES_SPEWPA_SANDSTORM]   = SPEWPA_SPECIES_INFO(SANDSTORM, MON_RANDOMIZER_INVALID),
+    [SPECIES_SPEWPA_RIVER]       = SPEWPA_SPECIES_INFO(RIVER, MON_RANDOMIZER_INVALID),
+    [SPECIES_SPEWPA_MONSOON]     = SPEWPA_SPECIES_INFO(MONSOON, MON_RANDOMIZER_INVALID),
+    [SPECIES_SPEWPA_SAVANNA]     = SPEWPA_SPECIES_INFO(SAVANNA, MON_RANDOMIZER_INVALID),
+    [SPECIES_SPEWPA_SUN]         = SPEWPA_SPECIES_INFO(SUN, MON_RANDOMIZER_INVALID),
+    [SPECIES_SPEWPA_OCEAN]       = SPEWPA_SPECIES_INFO(OCEAN, MON_RANDOMIZER_INVALID),
+    [SPECIES_SPEWPA_JUNGLE]      = SPEWPA_SPECIES_INFO(JUNGLE, MON_RANDOMIZER_INVALID),
+    [SPECIES_SPEWPA_FANCY]       = SPEWPA_SPECIES_INFO(FANCY, MON_RANDOMIZER_INVALID),
+    [SPECIES_SPEWPA_POKEBALL]    = SPEWPA_SPECIES_INFO(POKEBALL, MON_RANDOMIZER_INVALID),
 
 #define VIVILLON_MISC_INFO(form, color, iconPal)                                            \
         .baseHP        = 80,                                                                \
@@ -1223,6 +1227,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "topography of the land it was born in.\n"
             "This form is from frigid lands.\n"
             "It scatters toxic color scales in battle."),
+        .randomizerMode = MON_RANDOMIZER_RANDOM_FORM,
     },
     [SPECIES_VIVILLON_POLAR] =
     {
@@ -1232,6 +1237,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "topography of the land it was born in.\n"
             "This form is from snowy lands.\n"
             "It scatters toxic color scales in battle."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_VIVILLON_TUNDRA] =
     {
@@ -1241,6 +1247,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "topography of the land it was born in.\n"
             "This form is from lands of severe cold.\n"
             "It scatters toxic color scales in battle."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_VIVILLON_CONTINENTAL] =
     {
@@ -1250,6 +1257,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "topography of the land it was born in.\n"
             "This form is from lands of vast space.\n"
             "It scatters toxic color scales in battle."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_VIVILLON_GARDEN] =
     {
@@ -1259,6 +1267,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "topography of the land it was born in.\n"
             "This form is from verdant lands.\n"
             "It scatters toxic color scales in battle."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_VIVILLON_ELEGANT] =
     {
@@ -1268,6 +1277,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "topography of the land it was born in. This\n"
             "form is from lands with distinct seasons.\n"
             "It scatters toxic color scales in battle."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_VIVILLON_MEADOW] =
     {
@@ -1277,6 +1287,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "topography of the land it was born in. This\n"
             "form is from lands where flowers bloom.\n"
             "It scatters toxic color scales in battle."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_VIVILLON_MODERN] =
     {
@@ -1286,6 +1297,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "topography of the land it was born in.\n"
             "This form is from sun-drenched lands.\n"
             "It scatters toxic color scales in battle."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_VIVILLON_MARINE] =
     {
@@ -1295,6 +1307,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "topography of the land it was born in. This\n"
             "form is from lands with ocean breezes.\n"
             "It scatters toxic color scales in battle."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_VIVILLON_ARCHIPELAGO] =
     {
@@ -1304,6 +1317,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "topography of the land it was born in.\n"
             "This form is from places with many islands.\n"
             "It scatters toxic color scales in battle."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_VIVILLON_HIGH_PLAINS] =
     {
@@ -1313,6 +1327,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "topography of the land it was born in.\n"
             "This form is from lands with little rain.\n"
             "It scatters toxic color scales in battle."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_VIVILLON_SANDSTORM] =
     {
@@ -1322,6 +1337,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "topography of the land it was born in.\n"
             "This form is from parched lands.\n"
             "It scatters toxic color scales in battle."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_VIVILLON_RIVER] =
     {
@@ -1331,6 +1347,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "topography of the land it was born in. This\n"
             "form is from lands where large rivers flow.\n"
             "It scatters toxic color scales in battle."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_VIVILLON_MONSOON] =
     {
@@ -1340,6 +1357,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "topography of the land it was born in. This\n"
             "form is from lands with intense rainfall.\n"
             "It scatters toxic color scales in battle."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_VIVILLON_SAVANNA] =
     {
@@ -1349,6 +1367,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "topography of the land it was born in. This\n"
             "form is from lands with a tropical climate.\n"
             "It scatters toxic color scales in battle."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_VIVILLON_SUN] =
     {
@@ -1358,6 +1377,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "topography of the land it was born in.\n"
             "This form is from lands bathed in light.\n"
             "It scatters toxic color scales in battle."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_VIVILLON_OCEAN] =
     {
@@ -1367,6 +1387,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "topography of the land it was born in. This\n"
             "form is from lands of perpetual summer.\n"
             "It scatters toxic color scales in battle."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_VIVILLON_JUNGLE] =
     {
@@ -1376,6 +1397,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "topography of the land it was born in. This\n"
             "form is from lands of tropical rainforests.\n"
             "It scatters toxic color scales in battle."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_VIVILLON_FANCY] =
     {
@@ -1385,6 +1407,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "topography of the land it was born in.\n"
             "This form is from a mysterious land.\n"
             "It scatters toxic color scales in battle."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_VIVILLON_POKEBALL] =
     {
@@ -1394,6 +1417,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "topography of the land it was born in.\n"
             "This form is from a special land.\n"
             "It scatters toxic color scales in battle."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_SCATTERBUG
 
@@ -1496,26 +1520,24 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .trainerScale = 271,
         .trainerOffset = 0,
         .frontPic = gMonFrontPic_Pyroar,
+        .frontPicFemale = gMonFrontPic_PyroarF,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicSizeFemale = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = sAnims_Pyroar,
         .frontAnimId = ANIM_V_SHAKE,
         .backPic = gMonBackPic_Pyroar,
+        .backPicFemale = gMonBackPic_PyroarF,
         .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicSizeFemale = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 3,
         .backAnimId = BACK_ANIM_H_STRETCH,
         .palette = gMonPalette_Pyroar,
         .shinyPalette = gMonShinyPalette_Pyroar,
         .iconSprite = gMonIcon_Pyroar,
-        .iconPalIndex = 2,
-#if P_GENDER_DIFFERENCES
-        .frontPicFemale = gMonFrontPic_PyroarF,
-        .frontPicSizeFemale = MON_COORDS_SIZE(64, 64),
-        .backPicFemale = gMonBackPic_PyroarF,
-        .backPicSizeFemale = MON_COORDS_SIZE(64, 64),
         .iconSpriteFemale = gMonIcon_PyroarF,
+        .iconPalIndex = 2,
         .iconPalIndexFemale = 2,
-#endif //P_GENDER_DIFFERENCES
         SHADOW(-2, 11, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(Pyroar)
         OVERWORLD(
@@ -1576,19 +1598,19 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .backPicSize = MON_COORDS_SIZE(64, 40),                                 \
         .backPicYOffset = 12,                                                   \
         .backAnimId = BACK_ANIM_CONVEX_DOUBLE_ARC,                              \
-        .palette = gMonPalette_Flabebe##Form,                                   \
-        .shinyPalette = gMonShinyPalette_Flabebe##Form,                         \
-        .iconSprite = gMonIcon_Flabebe##Form,                                   \
+        .palette = gMonPalette_Flabebe##Form##Flower,                           \
+        .shinyPalette = gMonShinyPalette_Flabebe##Form##Flower,                 \
+        .iconSprite = gMonIcon_Flabebe##Form##Flower,                           \
         .iconPalIndex = iconPal,                                                \
-        SHADOW(0, 11, SHADOW_SIZE_S)                                            \
+        SHADOW(0, 11, SHADOW_SIZE_S)                                        \
         FOOTPRINT(Flabebe)                                                      \
         OVERWORLD(                                                              \
-            sPicTable_Flabebe##Form,                                            \
+            sPicTable_Flabebe##Form##Flower,                                    \
             SIZE_32x32,                                                         \
             SHADOW_SIZE_M,                                                      \
             TRACKS_FOOT,                                                        \
-            gOverworldPalette_Flabebe##Form,                                    \
-            gShinyOverworldPalette_Flabebe##Form                                \
+            gOverworldPalette_Flabebe##Form##Flower,                            \
+            gShinyOverworldPalette_Flabebe##Form##Flower                        \
         )                                                                       \
         .levelUpLearnset = sFlabebeLevelUpLearnset,                             \
         .teachableLearnset = sFlabebeTeachableLearnset,                         \
@@ -1604,6 +1626,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Immediately after birth, this Pokémon\n"
             "begins flying around in search of a\n"
             "flower it likes."),
+        .randomizerMode = MON_RANDOMIZER_RANDOM_FORM,
     },
     [SPECIES_FLABEBE_YELLOW] =
     {
@@ -1613,6 +1636,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "drawing forth the power hidden\n"
             "within flowers. This Pokémon is\n"
             "particularly fond of yellow flowers."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_FLABEBE_ORANGE] =
     {
@@ -1622,6 +1646,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "and gives them some of its energy in\n"
             "return. This Pokémon likes orange\n"
             "flowers best of all."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_FLABEBE_BLUE]   =
     {
@@ -1631,6 +1656,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "best of all. It floats upward using the\n"
             "power emanating from its flower\n"
             "and bobs along lightly through the air."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_FLABEBE_WHITE]  =
     {
@@ -1640,6 +1666,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "a place blooming with flowers of\n"
             "the same white color as itself, and\n"
             "then it goes to sleep."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
 #define FLOETTE_MISC_INFO(form, FORM, iconPal)                                  \
@@ -1664,19 +1691,19 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .frontAnimFrames = sAnims_Floette,                                      \
         .frontAnimId = ANIM_V_SLIDE_WOBBLE,                                     \
         .backAnimId = BACK_ANIM_CONVEX_DOUBLE_ARC,                              \
-        .palette = gMonPalette_Floette ##form,                                  \
-        .shinyPalette = gMonShinyPalette_Floette ##form,                        \
-        .iconSprite = gMonIcon_Floette##form,                                   \
+        .palette = gMonPalette_Floette ##form##Flower,                          \
+        .shinyPalette = gMonShinyPalette_Floette ##form##Flower,                \
+        .iconSprite = gMonIcon_Floette##form##Flower,                           \
         .iconPalIndex = iconPal,                                                \
-        SHADOW(-3, 12, SHADOW_SIZE_S)                                           \
+        SHADOW(-3, 12, SHADOW_SIZE_S)                                       \
         FOOTPRINT(Floette)                                                      \
         OVERWORLD(                                                              \
-            sPicTable_Floette ##form,                                           \
+            sPicTable_Floette ##form##Flower,                                   \
             SIZE_32x32,                                                         \
             SHADOW_SIZE_M,                                                      \
             TRACKS_FOOT,                                                        \
-            gOverworldPalette_Floette ##form,                                   \
-            gShinyOverworldPalette_Floette ##form                               \
+            gOverworldPalette_Floette ##form##Flower,                           \
+            gShinyOverworldPalette_Floette ##form##Flower                       \
         )                                                                       \
         .formSpeciesIdTable = sFloetteFormSpeciesIdTable
 
@@ -1710,6 +1737,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "of light to pour its own energy\n"
             "into flowers and draw forth their\n"
             "latent potential."),
+        .randomizerMode = MON_RANDOMIZER_SPECIAL_FORM,
     },
     [SPECIES_FLOETTE_YELLOW] =
     {
@@ -1719,6 +1747,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "power hidden within yellow flowers.\n"
             "This power then becomes the moves\n"
             "Floette uses to protect itself."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_FLOETTE_ORANGE] =
     {
@@ -1728,6 +1757,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "most power when in sync with orange\n"
             "flowers, compared to flowers of other\n"
             "colors."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_FLOETTE_BLUE] =
     {
@@ -1737,6 +1767,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "flowering plants that are withering, it\n"
             "will bring them back to its territory\n"
             "and care for them."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_FLOETTE_WHITE] =
     {
@@ -1746,6 +1777,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "flower bed, it will attack them\n"
             "without mercy. This Floette takes\n"
             "particularly good care of white flowers."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_FLOETTE_ETERNAL] =
     {
@@ -1764,15 +1796,16 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "longer be found blooming anywhere. It's\n"
             "also thought to contain terrifying\n"
             "power."),
-        .frontPic = gMonFrontPic_FloetteEternal,
+        .frontPic = gMonFrontPic_FloetteEternalFlower,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 3,
         .enemyMonElevation = 4,
-        .backPic = gMonBackPic_FloetteEternal,
+        .backPic = gMonBackPic_FloetteEternalFlower,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 2,
-        .levelUpLearnset = sFloetteEternalLevelUpLearnset,
-        .teachableLearnset = sFloetteEternalTeachableLearnset,
+        .levelUpLearnset = sFloetteEternalFlowerLevelUpLearnset,
+        .teachableLearnset = sFloetteEternalFlowerTeachableLearnset,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
 #define FLORGES_MISC_INFO(Form, iconPal)                                        \
@@ -1812,19 +1845,19 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .backPicSize = MON_COORDS_SIZE(64, 48),                                 \
         .backPicYOffset = 9,                                                    \
         .backAnimId = BACK_ANIM_SHRINK_GROW_VIBRATE,                            \
-        .palette = gMonPalette_Florges##Form,                                   \
-        .shinyPalette = gMonShinyPalette_Florges##Form,                         \
-        .iconSprite = gMonIcon_Florges##Form,                                   \
+        .palette = gMonPalette_Florges##Form##Flower,                           \
+        .shinyPalette = gMonShinyPalette_Florges##Form##Flower,                 \
+        .iconSprite = gMonIcon_Florges##Form##Flower,                           \
         .iconPalIndex = iconPal,                                                \
-        SHADOW(-5, 15, SHADOW_SIZE_M)                                           \
+        SHADOW(-5, 15, SHADOW_SIZE_M)                                       \
         FOOTPRINT(Florges)                                                      \
         OVERWORLD(                                                              \
-            sPicTable_Florges ##Form,                                           \
+            sPicTable_Florges ##Form##Flower,                                   \
             SIZE_32x32,                                                         \
             SHADOW_SIZE_M,                                                      \
             TRACKS_FOOT,                                                        \
-            gOverworldPalette_Florges ##Form,                                   \
-            gShinyOverworldPalette_Florges ##Form                               \
+            gOverworldPalette_Florges ##Form##Flower,                           \
+            gShinyOverworldPalette_Florges ##Form##Flower                       \
         )                                                                       \
         .levelUpLearnset = sFlorgesLevelUpLearnset,                             \
         .teachableLearnset = sFlorgesTeachableLearnset,                         \
@@ -1838,6 +1871,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "flower garden in its territory. It\n"
             "draws forth the power of the red\n"
             "flowers around its neck."),
+        .randomizerMode = MON_RANDOMIZER_RANDOM_FORM,
     },
     [SPECIES_FLORGES_YELLOW] =
     {
@@ -1847,6 +1881,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "forth the power of yellow flowers. It\n"
             "ruthlessly punishes anyone who\n"
             "tramples on flowering plants."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_FLORGES_ORANGE] =
     {
@@ -1856,6 +1891,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "governors would lovingly raise Florges to\n"
             "care for their castles' exquisite\n"
             "gardens."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_FLORGES_BLUE] =
     {
@@ -1864,6 +1900,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Blue pigments were tremendously\n"
             "expensive in the past, so paintings\n"
             "of blue Florges are highly valuable."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
     [SPECIES_FLORGES_WHITE] =
     {
@@ -1873,6 +1910,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "flowered Florges will be beautifully\n"
             "decorated with flowering plants of\n"
             "many different colors."),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_FLABEBE
 
@@ -2303,31 +2341,31 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .pokemonOffset = 12,
         .trainerScale = 256,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_MeowsticM,
+        .frontPic = gMonFrontPic_MeowsticMale,
         .frontPicSize = MON_COORDS_SIZE(48, 64),
         .frontPicYOffset = 3,
         .frontAnimFrames = sAnims_Meowstic,
         .frontAnimId = ANIM_GROW_VIBRATE,
-        .backPic = gMonBackPic_MeowsticM,
+        .backPic = gMonBackPic_MeowsticMale,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 9,
         .backAnimId = BACK_ANIM_CONCAVE_ARC_LARGE,
-        .palette = gMonPalette_MeowsticM,
-        .shinyPalette = gMonShinyPalette_MeowsticM,
-        .iconSprite = gMonIcon_MeowsticM,
+        .palette = gMonPalette_MeowsticMale,
+        .shinyPalette = gMonShinyPalette_MeowsticMale,
+        .iconSprite = gMonIcon_MeowsticMale,
         .iconPalIndex = 0,
         SHADOW(-2, 11, SHADOW_SIZE_S)
         FOOTPRINT(Meowstic)
         OVERWORLD(
-            sPicTable_MeowsticM,
+            sPicTable_MeowsticMale,
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_FOOT,
-            gOverworldPalette_MeowsticM,
-            gShinyOverworldPalette_MeowsticM
+            gOverworldPalette_MeowsticMale,
+            gShinyOverworldPalette_MeowsticMale
         )
-        .levelUpLearnset = sMeowsticMLevelUpLearnset,
-        .teachableLearnset = sMeowsticMTeachableLearnset,
+        .levelUpLearnset = sMeowsticMaleLevelUpLearnset,
+        .teachableLearnset = sMeowsticMaleTeachableLearnset,
         .formSpeciesIdTable = sMeowsticFormSpeciesIdTable,
     },
 
@@ -2365,31 +2403,31 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .pokemonOffset = 12,
         .trainerScale = 256,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_MeowsticF,
+        .frontPic = gMonFrontPic_MeowsticFemale,
         .frontPicSize = MON_COORDS_SIZE(56, 64),
         .frontPicYOffset = 2,
         .frontAnimFrames = sAnims_Meowstic,
         .frontAnimId = ANIM_GROW_VIBRATE,
-        .backPic = gMonBackPic_MeowsticF,
+        .backPic = gMonBackPic_MeowsticFemale,
         .backPicSize = MON_COORDS_SIZE(48, 64),
         .backPicYOffset = 9,
         .backAnimId = BACK_ANIM_CONCAVE_ARC_LARGE,
-        .palette = gMonPalette_MeowsticF,
-        .shinyPalette = gMonShinyPalette_MeowsticF,
-        .iconSprite = gMonIcon_MeowsticF,
+        .palette = gMonPalette_MeowsticFemale,
+        .shinyPalette = gMonShinyPalette_MeowsticFemale,
+        .iconSprite = gMonIcon_MeowsticFemale,
         .iconPalIndex = 0,
         SHADOW(-2, 12, SHADOW_SIZE_S)
         FOOTPRINT(Meowstic)
         OVERWORLD(
-            sPicTable_MeowsticF,
+            sPicTable_MeowsticFemale,
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_FOOT,
-            gOverworldPalette_MeowsticF,
-            gShinyOverworldPalette_MeowsticF
+            gOverworldPalette_MeowsticFemale,
+            gShinyOverworldPalette_MeowsticFemale
         )
-        .levelUpLearnset = sMeowsticFLevelUpLearnset,
-        .teachableLearnset = sMeowsticFTeachableLearnset,
+        .levelUpLearnset = sMeowsticFemaleLevelUpLearnset,
+        .teachableLearnset = sMeowsticFemaleTeachableLearnset,
         .formSpeciesIdTable = sMeowsticFormSpeciesIdTable,
     },
 #endif //P_FAMILY_ESPURR
@@ -4221,32 +4259,32 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .pokemonOffset = 7,
         .trainerScale = 257,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_SliggooHisui,
+        .frontPic = gMonFrontPic_SliggooHisuian,
         .frontPicSize = MON_COORDS_SIZE(48, 56),
         .frontPicYOffset = 7,
-        .frontAnimFrames = sAnims_SliggooHisui,
+        .frontAnimFrames = sAnims_SliggooHisuian,
         //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        .backPic = gMonBackPic_SliggooHisui,
+        .backPic = gMonBackPic_SliggooHisuian,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 1,
         //.backAnimId = BACK_ANIM_NONE,
-        .palette = gMonPalette_SliggooHisui,
-        .shinyPalette = gMonShinyPalette_SliggooHisui,
-        .iconSprite = gMonIcon_SliggooHisui,
+        .palette = gMonPalette_SliggooHisuian,
+        .shinyPalette = gMonShinyPalette_SliggooHisuian,
+        .iconSprite = gMonIcon_SliggooHisuian,
         .iconPalIndex = 2,
         SHADOW(2, 6, SHADOW_SIZE_M)
         FOOTPRINT(Sliggoo)
         OVERWORLD(
-            sPicTable_SliggooHisui,
+            sPicTable_SliggooHisuian,
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_FOOT,
-            gOverworldPalette_SliggooHisui,
-            gShinyOverworldPalette_SliggooHisui
+            gOverworldPalette_SliggooHisuian,
+            gShinyOverworldPalette_SliggooHisuian
         )
         .isHisuianForm = TRUE,
-        .levelUpLearnset = sSliggooHisuiLevelUpLearnset,
-        .teachableLearnset = sSliggooHisuiTeachableLearnset,
+        .levelUpLearnset = sSliggooHisuianLevelUpLearnset,
+        .teachableLearnset = sSliggooHisuianTeachableLearnset,
         .formSpeciesIdTable = sSliggooFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_LEVEL_RAIN, 50, SPECIES_GOODRA_HISUI},
                                 {EVO_LEVEL_FOG, 50, SPECIES_GOODRA_HISUI}),
@@ -4286,32 +4324,32 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .pokemonOffset = 1,
         .trainerScale = 334,
         .trainerOffset = 4,
-        .frontPic = gMonFrontPic_GoodraHisui,
+        .frontPic = gMonFrontPic_GoodraHisuian,
         .frontPicSize = MON_COORDS_SIZE(56, 64),
         .frontPicYOffset = 2,
-        .frontAnimFrames = sAnims_GoodraHisui,
+        .frontAnimFrames = sAnims_GoodraHisuian,
         //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        .backPic = gMonBackPic_GoodraHisui,
+        .backPic = gMonBackPic_GoodraHisuian,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 0,
         //.backAnimId = BACK_ANIM_NONE,
-        .palette = gMonPalette_GoodraHisui,
-        .shinyPalette = gMonShinyPalette_GoodraHisui,
-        .iconSprite = gMonIcon_GoodraHisui,
+        .palette = gMonPalette_GoodraHisuian,
+        .shinyPalette = gMonShinyPalette_GoodraHisuian,
+        .iconSprite = gMonIcon_GoodraHisuian,
         .iconPalIndex = 2,
         SHADOW(1, 12, SHADOW_SIZE_M)
         FOOTPRINT(Goodra)
         OVERWORLD(
-            sPicTable_GoodraHisui,
+            sPicTable_GoodraHisuian,
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_FOOT,
-            gOverworldPalette_GoodraHisui,
-            gShinyOverworldPalette_GoodraHisui
+            gOverworldPalette_GoodraHisuian,
+            gShinyOverworldPalette_GoodraHisuian
         )
         .isHisuianForm = TRUE,
-        .levelUpLearnset = sGoodraHisuiLevelUpLearnset,
-        .teachableLearnset = sGoodraHisuiTeachableLearnset,
+        .levelUpLearnset = sGoodraHisuianLevelUpLearnset,
+        .teachableLearnset = sGoodraHisuianTeachableLearnset,
         .formSpeciesIdTable = sGoodraFormSpeciesIdTable,
     },
 #endif //P_HISUIAN_FORMS
@@ -4575,6 +4613,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .formSpeciesIdTable = sPumpkabooFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_GOURGEIST_AVERAGE},
                                 {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_GOURGEIST_AVERAGE}),
+        .randomizerMode = MON_RANDOMIZER_RANDOM_FORM,
     },
 
     [SPECIES_PUMPKABOO_SMALL] =
@@ -4639,6 +4678,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .formSpeciesIdTable = sPumpkabooFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_GOURGEIST_SMALL},
                                 {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_GOURGEIST_SMALL}),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_PUMPKABOO_LARGE] =
@@ -4703,6 +4743,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .formSpeciesIdTable = sPumpkabooFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_GOURGEIST_LARGE},
                                 {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_GOURGEIST_LARGE}),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_PUMPKABOO_SUPER] =
@@ -4769,6 +4810,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .formSpeciesIdTable = sPumpkabooFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_GOURGEIST_SUPER},
                                 {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_GOURGEIST_SUPER}),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_GOURGEIST_AVERAGE] =
@@ -4831,6 +4873,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .levelUpLearnset = sGourgeistLevelUpLearnset,
         .teachableLearnset = sGourgeistTeachableLearnset,
         .formSpeciesIdTable = sGourgeistFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_RANDOM_FORM,
     },
 
     [SPECIES_GOURGEIST_SMALL] =
@@ -4893,6 +4936,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .levelUpLearnset = sGourgeistLevelUpLearnset,
         .teachableLearnset = sGourgeistTeachableLearnset,
         .formSpeciesIdTable = sGourgeistFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_GOURGEIST_LARGE] =
@@ -4955,6 +4999,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .levelUpLearnset = sGourgeistLevelUpLearnset,
         .teachableLearnset = sGourgeistTeachableLearnset,
         .formSpeciesIdTable = sGourgeistFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_GOURGEIST_SUPER] =
@@ -5019,6 +5064,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .levelUpLearnset = sGourgeistLevelUpLearnset,
         .teachableLearnset = sGourgeistTeachableLearnset,
         .formSpeciesIdTable = sGourgeistFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_PUMPKABOO
 
@@ -5189,32 +5235,32 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .pokemonOffset = 1,
         .trainerScale = 334,
         .trainerOffset = 4,
-        .frontPic = gMonFrontPic_AvaluggHisui,
+        .frontPic = gMonFrontPic_AvaluggHisuian,
         .frontPicSize = MON_COORDS_SIZE(64, 48),
         .frontPicYOffset = 6,
-        .frontAnimFrames = sAnims_AvaluggHisui,
+        .frontAnimFrames = sAnims_AvaluggHisuian,
         //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        .backPic = gMonBackPic_AvaluggHisui,
+        .backPic = gMonBackPic_AvaluggHisuian,
         .backPicSize = MON_COORDS_SIZE(64, 32),
         .backPicYOffset = 16,
         //.backAnimId = BACK_ANIM_NONE,
-        .palette = gMonPalette_AvaluggHisui,
-        .shinyPalette = gMonShinyPalette_AvaluggHisui,
-        .iconSprite = gMonIcon_AvaluggHisui,
+        .palette = gMonPalette_AvaluggHisuian,
+        .shinyPalette = gMonShinyPalette_AvaluggHisuian,
+        .iconSprite = gMonIcon_AvaluggHisuian,
         .iconPalIndex = 5,
         SHADOW(2, -2, SHADOW_SIZE_L)
         FOOTPRINT(Avalugg)
         OVERWORLD(
-            sPicTable_AvaluggHisui,
+            sPicTable_AvaluggHisuian,
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_FOOT,
-            gOverworldPalette_AvaluggHisui,
-            gShinyOverworldPalette_AvaluggHisui
+            gOverworldPalette_AvaluggHisuian,
+            gShinyOverworldPalette_AvaluggHisuian
         )
         .isHisuianForm = TRUE,
-        .levelUpLearnset = sAvaluggHisuiLevelUpLearnset,
-        .teachableLearnset = sAvaluggHisuiTeachableLearnset,
+        .levelUpLearnset = sAvaluggHisuianLevelUpLearnset,
+        .teachableLearnset = sAvaluggHisuianTeachableLearnset,
         .formSpeciesIdTable = sAvaluggFormSpeciesIdTable,
     },
 #endif //P_HISUIAN_FORMS
@@ -5994,6 +6040,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .teachableLearnset = sDiancieTeachableLearnset,
         .formSpeciesIdTable = sDiancieFormSpeciesIdTable,
         .formChangeTable = sDiancieFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_DIANCIE
@@ -6131,6 +6178,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .teachableLearnset = sHoopaUnboundTeachableLearnset,
         .formSpeciesIdTable = sHoopaFormSpeciesIdTable,
         .formChangeTable = sHoopaFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_HOOPA
 

@@ -665,32 +665,33 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .pokemonOffset = 17,
         .trainerScale = 256,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_OinkologneM,
+        .frontPic = gMonFrontPic_OinkologneMale,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 6,
         .frontAnimFrames = sAnims_Oinkologne,
         //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        .backPic = gMonBackPic_OinkologneM,
+        .backPic = gMonBackPic_OinkologneMale,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 8,
         //.backAnimId = BACK_ANIM_NONE,
-        .palette = gMonPalette_OinkologneM,
-        .shinyPalette = gMonShinyPalette_OinkologneM,
-        .iconSprite = gMonIcon_OinkologneM,
+        .palette = gMonPalette_OinkologneMale,
+        .shinyPalette = gMonShinyPalette_OinkologneMale,
+        .iconSprite = gMonIcon_OinkologneMale,
         .iconPalIndex = 1,
         SHADOW(-2, 6, SHADOW_SIZE_M)
         FOOTPRINT(Oinkologne)
         OVERWORLD(
-            sPicTable_OinkologneM,
+            sPicTable_OinkologneMale,
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_FOOT,
-            gOverworldPalette_OinkologneM,
-            gShinyOverworldPalette_OinkologneM
+            gOverworldPalette_OinkologneMale,
+            gShinyOverworldPalette_OinkologneMale
         )
-        .levelUpLearnset = sOinkologneMLevelUpLearnset,
+        .levelUpLearnset = sOinkologneMaleLevelUpLearnset,
         .teachableLearnset = sOinkologneTeachableLearnset,
         .formSpeciesIdTable = sOinkologneFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_RANDOM_FORM,
     },
 
     [SPECIES_OINKOLOGNE_F] =
@@ -727,32 +728,33 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .pokemonOffset = 17,
         .trainerScale = 256,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_OinkologneF,
+        .frontPic = gMonFrontPic_OinkologneFemale,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 6,
         .frontAnimFrames = sAnims_Oinkologne,
         //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        .backPic = gMonBackPic_OinkologneF,
+        .backPic = gMonBackPic_OinkologneFemale,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 7,
         //.backAnimId = BACK_ANIM_NONE,
-        .palette = gMonPalette_OinkologneF,
-        .shinyPalette = gMonShinyPalette_OinkologneF,
-        .iconSprite = gMonIcon_OinkologneF,
+        .palette = gMonPalette_OinkologneFemale,
+        .shinyPalette = gMonShinyPalette_OinkologneFemale,
+        .iconSprite = gMonIcon_OinkologneFemale,
         .iconPalIndex = 0,
         SHADOW(3, 7, SHADOW_SIZE_M)
         FOOTPRINT(Oinkologne)
         OVERWORLD(
-            sPicTable_OinkologneF,
+            sPicTable_OinkologneFemale,
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_FOOT,
-            gOverworldPalette_OinkologneF,
-            gShinyOverworldPalette_OinkologneF
+            gOverworldPalette_OinkologneFemale,
+            gShinyOverworldPalette_OinkologneFemale
         )
-        .levelUpLearnset = sOinkologneFLevelUpLearnset,
+        .levelUpLearnset = sOinkologneFemaleLevelUpLearnset,
         .teachableLearnset = sOinkologneTeachableLearnset,
         .formSpeciesIdTable = sOinkologneFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_LECHONK
 
@@ -1281,7 +1283,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .abilities = { ABILITY_FRIEND_GUARD, ABILITY_CHEEK_POUCH, ABILITY_TECHNICIAN },
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Maushold"),
-        .cryId = CRY_MAUSHOLD_THREE,
+        .cryId = CRY_MAUSHOLD_FAMILY_OF_THREE,
         .natDexNum = NATIONAL_DEX_MAUSHOLD,
         .categoryName = _("Family"),
         .height = 3,
@@ -1295,32 +1297,33 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .pokemonOffset = 17,
         .trainerScale = 256,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_MausholdThree,
+        .frontPic = gMonFrontPic_MausholdFamilyOfThree,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 15,
         .frontAnimFrames = sAnims_Maushold,
         /*.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,*/
-        .backPic = gMonBackPic_MausholdThree,
+        .backPic = gMonBackPic_MausholdFamilyOfThree,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 15,
         /*.backAnimId = BACK_ANIM_NONE,*/
         .palette = gMonPalette_Maushold,
         .shinyPalette = gMonShinyPalette_Maushold,
-        .iconSprite = gMonIcon_MausholdThree,
+        .iconSprite = gMonIcon_MausholdFamilyOfThree,
         .iconPalIndex = 1,
         SHADOW(4, -1, SHADOW_SIZE_L)
-        FOOTPRINT(MausholdThree)
+        FOOTPRINT(MausholdFamilyOfThree)
         OVERWORLD(
-            sPicTable_MausholdThree,
+            sPicTable_MausholdFamilyOfThree,
             SIZE_32x32,
             SHADOW_SIZE_S,
             TRACKS_FOOT,
-            gOverworldPalette_MausholdThree,
-            gShinyOverworldPalette_MausholdThree
+            gOverworldPalette_MausholdFamilyOfThree,
+            gShinyOverworldPalette_MausholdFamilyOfThree
         )
         .levelUpLearnset = sMausholdLevelUpLearnset,
         .teachableLearnset = sMausholdTeachableLearnset,
         .formSpeciesIdTable = sMausholdFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_SPECIAL_FORM,
     },
     [SPECIES_MAUSHOLD_FOUR] =
     {
@@ -1342,7 +1345,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .abilities = { ABILITY_FRIEND_GUARD, ABILITY_CHEEK_POUCH, ABILITY_TECHNICIAN },
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Maushold"),
-        .cryId = CRY_MAUSHOLD_FOUR,
+        .cryId = CRY_MAUSHOLD_FAMILY_OF_FOUR,
         .natDexNum = NATIONAL_DEX_MAUSHOLD,
         .categoryName = _("Family"),
         .height = 3,
@@ -1356,32 +1359,33 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .pokemonOffset = 17,
         .trainerScale = 256,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_MausholdFour,
+        .frontPic = gMonFrontPic_MausholdFamilyOfFour,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 15,
         .frontAnimFrames = sAnims_Maushold,
         /*.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,*/
-        .backPic = gMonBackPic_MausholdFour,
+        .backPic = gMonBackPic_MausholdFamilyOfFour,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 15,
         /*.backAnimId = BACK_ANIM_NONE,*/
         .palette = gMonPalette_Maushold,
         .shinyPalette = gMonShinyPalette_Maushold,
-        .iconSprite = gMonIcon_MausholdFour,
+        .iconSprite = gMonIcon_MausholdFamilyOfFour,
         .iconPalIndex = 1,
         SHADOW(0, -1, SHADOW_SIZE_L)
-        FOOTPRINT(MausholdFour)
+        FOOTPRINT(MausholdFamilyOfFour)
         OVERWORLD(
-            sPicTable_MausholdFour,
+            sPicTable_MausholdFamilyOfFour,
             SIZE_32x32,
             SHADOW_SIZE_S,
             TRACKS_FOOT,
-            gOverworldPalette_MausholdFour,
-            gShinyOverworldPalette_MausholdFour
+            gOverworldPalette_MausholdFamilyOfFour,
+            gShinyOverworldPalette_MausholdFamilyOfFour
         )
         .levelUpLearnset = sMausholdLevelUpLearnset,
         .teachableLearnset = sMausholdTeachableLearnset,
         .formSpeciesIdTable = sMausholdFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_TANDEMAUS
 
@@ -1743,24 +1747,25 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 4,
         /*.backAnimId = BACK_ANIM_NONE,*/
-        .palette = gMonPalette_SquawkabillyGreen,
-        .shinyPalette = gMonShinyPalette_SquawkabillyGreen,
-        .iconSprite = gMonIcon_SquawkabillyGreen,
+        .palette = gMonPalette_SquawkabillyGreenPlumage,
+        .shinyPalette = gMonShinyPalette_SquawkabillyGreenPlumage,
+        .iconSprite = gMonIcon_SquawkabillyGreenPlumage,
         .iconPalIndex = 1,
         SHADOW(-6, 9, SHADOW_SIZE_M)
         FOOTPRINT(Squawkabilly)
         OVERWORLD(
-            sPicTable_SquawkabillyGreen,
+            sPicTable_SquawkabillyGreenPlumage,
             SIZE_32x32,
             SHADOW_SIZE_S,
             TRACKS_NONE,
-            gOverworldPalette_SquawkabillyGreen,
-            gShinyOverworldPalette_SquawkabillyGreen
+            gOverworldPalette_SquawkabillyGreenPlumage,
+            gShinyOverworldPalette_SquawkabillyGreenPlumage
         )
         .levelUpLearnset = sSquawkabillyLevelUpLearnset,
         .teachableLearnset = sSquawkabillyTeachableLearnset,
         .eggMoveLearnset = sSquawkabillyEggMoveLearnset,
         .formSpeciesIdTable = sSquawkabillyFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_RANDOM_FORM,
     },
 
     [SPECIES_SQUAWKABILLY_BLUE] =
@@ -1806,24 +1811,25 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 4,
         /*.backAnimId = BACK_ANIM_NONE,*/
-        .palette = gMonPalette_SquawkabillyBlue,
-        .shinyPalette = gMonShinyPalette_SquawkabillyBlue,
-        .iconSprite = gMonIcon_SquawkabillyBlue,
+        .palette = gMonPalette_SquawkabillyBluePlumage,
+        .shinyPalette = gMonShinyPalette_SquawkabillyBluePlumage,
+        .iconSprite = gMonIcon_SquawkabillyBluePlumage,
         .iconPalIndex = 0,
         SHADOW(-6, 9, SHADOW_SIZE_M)
         FOOTPRINT(Squawkabilly)
         OVERWORLD(
-            sPicTable_SquawkabillyBlue,
+            sPicTable_SquawkabillyBluePlumage,
             SIZE_32x32,
             SHADOW_SIZE_S,
             TRACKS_NONE,
-            gOverworldPalette_SquawkabillyBlue,
-            gShinyOverworldPalette_SquawkabillyBlue
+            gOverworldPalette_SquawkabillyBluePlumage,
+            gShinyOverworldPalette_SquawkabillyBluePlumage
         )
         .levelUpLearnset = sSquawkabillyLevelUpLearnset,
         .teachableLearnset = sSquawkabillyTeachableLearnset,
         .eggMoveLearnset = sSquawkabillyEggMoveLearnset,
         .formSpeciesIdTable = sSquawkabillyFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_SQUAWKABILLY_YELLOW] =
@@ -1869,24 +1875,25 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 4,
         /*.backAnimId = BACK_ANIM_NONE,*/
-        .palette = gMonPalette_SquawkabillyYellow,
-        .shinyPalette = gMonShinyPalette_SquawkabillyYellow,
-        .iconSprite = gMonIcon_SquawkabillyYellow,
+        .palette = gMonPalette_SquawkabillyYellowPlumage,
+        .shinyPalette = gMonShinyPalette_SquawkabillyYellowPlumage,
+        .iconSprite = gMonIcon_SquawkabillyYellowPlumage,
         .iconPalIndex = 1,
         SHADOW(-6, 9, SHADOW_SIZE_M)
         FOOTPRINT(Squawkabilly)
         OVERWORLD(
-            sPicTable_SquawkabillyYellow,
+            sPicTable_SquawkabillyYellowPlumage,
             SIZE_32x32,
             SHADOW_SIZE_S,
             TRACKS_NONE,
-            gOverworldPalette_SquawkabillyYellow,
-            gShinyOverworldPalette_SquawkabillyYellow
+            gOverworldPalette_SquawkabillyYellowPlumage,
+            gShinyOverworldPalette_SquawkabillyYellowPlumage
         )
         .levelUpLearnset = sSquawkabillyLevelUpLearnset,
         .teachableLearnset = sSquawkabillyTeachableLearnset,
         .eggMoveLearnset = sSquawkabillyEggMoveLearnset,
         .formSpeciesIdTable = sSquawkabillyFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_SQUAWKABILLY_WHITE] =
@@ -1932,24 +1939,25 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 4,
         /*.backAnimId = BACK_ANIM_NONE,*/
-        .palette = gMonPalette_SquawkabillyWhite,
-        .shinyPalette = gMonShinyPalette_SquawkabillyWhite,
-        .iconSprite = gMonIcon_SquawkabillyWhite,
+        .palette = gMonPalette_SquawkabillyWhitePlumage,
+        .shinyPalette = gMonShinyPalette_SquawkabillyWhitePlumage,
+        .iconSprite = gMonIcon_SquawkabillyWhitePlumage,
         .iconPalIndex = 0,
         SHADOW(-6, 9, SHADOW_SIZE_M)
         FOOTPRINT(Squawkabilly)
         OVERWORLD(
-            sPicTable_SquawkabillyWhite,
+            sPicTable_SquawkabillyWhitePlumage,
             SIZE_32x32,
             SHADOW_SIZE_S,
             TRACKS_NONE,
-            gOverworldPalette_SquawkabillyWhite,
-            gShinyOverworldPalette_SquawkabillyWhite
+            gOverworldPalette_SquawkabillyWhitePlumage,
+            gShinyOverworldPalette_SquawkabillyWhitePlumage
         )
         .levelUpLearnset = sSquawkabillyLevelUpLearnset,
         .teachableLearnset = sSquawkabillyTeachableLearnset,
         .eggMoveLearnset = sSquawkabillyEggMoveLearnset,
         .formSpeciesIdTable = sSquawkabillyFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_SQUAWKABILLY
 
@@ -2619,7 +2627,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .trainerOffset = 0,
         .frontPic = gMonFrontPic_Maschiff,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
-        .frontPicYOffset = 11,
+        .frontPicYOffset = 8,
         .frontAnimFrames = sAnims_Maschiff,
         //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Maschiff,
@@ -4100,6 +4108,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .teachableLearnset = sPalafinTeachableLearnset,
         .formSpeciesIdTable = sPalafinFormSpeciesIdTable,
         .formChangeTable = sPalafinZeroFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_FINIZEN
 
@@ -4993,6 +5002,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .teachableLearnset = sTatsugiriTeachableLearnset,
         .eggMoveLearnset = sTatsugiriEggMoveLearnset,
         .formSpeciesIdTable = sTatsugiriFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_RANDOM_FORM,
     },
 
     [SPECIES_TATSUGIRI_DROOPY] =
@@ -5055,6 +5065,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .teachableLearnset = sTatsugiriTeachableLearnset,
         .eggMoveLearnset = sTatsugiriEggMoveLearnset,
         .formSpeciesIdTable = sTatsugiriFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_TATSUGIRI_STRETCHY] =
@@ -5117,6 +5128,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .teachableLearnset = sTatsugiriTeachableLearnset,
         .eggMoveLearnset = sTatsugiriEggMoveLearnset,
         .formSpeciesIdTable = sTatsugiriFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_TATSUGIRI
 
@@ -6986,6 +6998,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .levelUpLearnset = sPoltchageistLevelUpLearnset,
         .teachableLearnset = sPoltchageistTeachableLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_UNREMARKABLE_TEACUP, SPECIES_SINISTCHA_UNREMARKABLE}),
+        .randomizerMode = MON_RANDOMIZER_SPECIAL_FORM,
     },
     [SPECIES_POLTCHAGEIST_ARTISAN] =
     {
@@ -7048,6 +7061,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .levelUpLearnset = sPoltchageistLevelUpLearnset,
         .teachableLearnset = sPoltchageistTeachableLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_MASTERPIECE_TEACUP, SPECIES_SINISTCHA_MASTERPIECE}),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_SINISTCHA_UNREMARKABLE] =
@@ -7086,13 +7100,13 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .trainerOffset = 0,
         .frontPic = gMonFrontPic_Sinistcha,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
-        .frontPicYOffset = 3,
+        .frontPicYOffset = 10,
         .frontAnimFrames = sAnims_Sinistcha,
         //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .enemyMonElevation = 10,
         .backPic = gMonBackPic_Sinistcha,
         .backPicSize = MON_COORDS_SIZE(64, 64),
-        .backPicYOffset = 4,
+        .backPicYOffset = 13,
         //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_Sinistcha,
         .shinyPalette = gMonShinyPalette_Sinistcha,
@@ -7110,6 +7124,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         )
         .levelUpLearnset = sSinistchaLevelUpLearnset,
         .teachableLearnset = sSinistchaTeachableLearnset,
+        .randomizerMode = MON_RANDOMIZER_SPECIAL_FORM,
     },
     [SPECIES_SINISTCHA_MASTERPIECE] =
     {
@@ -7147,13 +7162,13 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .trainerOffset = 0,
         .frontPic = gMonFrontPic_Sinistcha,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
-        .frontPicYOffset = 3,
+        .frontPicYOffset = 10,
         .frontAnimFrames = sAnims_Sinistcha,
         //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .enemyMonElevation = 10,
         .backPic = gMonBackPic_Sinistcha,
         .backPicSize = MON_COORDS_SIZE(64, 64),
-        .backPicYOffset = 4,
+        .backPicYOffset = 13,
         //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_Sinistcha,
         .shinyPalette = gMonShinyPalette_Sinistcha,
@@ -7171,6 +7186,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         )
         .levelUpLearnset = sSinistchaLevelUpLearnset,
         .teachableLearnset = sSinistchaTeachableLearnset,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_POLTCHAGEIST
 
@@ -7341,12 +7357,12 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .trainerOffset = 0,
         .frontPic = gMonFrontPic_Fezandipiti,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
-        .frontPicYOffset = 1,
+        .frontPicYOffset = 2,
         .frontAnimFrames = sAnims_Fezandipiti,
         //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Fezandipiti,
         .backPicSize = MON_COORDS_SIZE(64, 64),
-        .backPicYOffset = 0,
+        .backPicYOffset = 4,
         //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_Fezandipiti,
         .shinyPalette = gMonShinyPalette_Fezandipiti,
@@ -7370,78 +7386,80 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 #endif //P_FAMILY_FEZANDIPITI
 
 #if P_FAMILY_OGERPON
-#define OGERPON_SPECIES_INFO(Form1, Form2, type, ability, color, frontYOffset, backYOffset, iconpalette, isTeraform)   \
-    {                                                                                                                  \
-        .baseHP        = 80,                                                                                           \
-        .baseAttack    = 120,                                                                                          \
-        .baseDefense   = 84,                                                                                           \
-        .baseSpeed     = 110,                                                                                          \
-        .baseSpAttack  = 60,                                                                                           \
-        .baseSpDefense = 96,                                                                                           \
-        .types = MON_TYPES(TYPE_GRASS, type),                                                                          \
-        .forceTeraType = type,                                                                                         \
-        .catchRate = 5,                                                                                                \
-        .expYield = 275,                                                                                               \
-        .evYield_Attack = 3,                                                                                           \
-        .genderRatio = MON_FEMALE,                                                                                     \
-        .eggCycles = 10,                                                                                               \
-        .friendship = STANDARD_FRIENDSHIP,                                                                             \
-        .growthRate = GROWTH_SLOW,                                                                                     \
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),                                                     \
-        .abilities = { ability, ABILITY_NONE },                                                                        \
-        .bodyColor = color,                                                                                            \
-        .speciesName = _("Ogerpon"),                                                                                   \
-        .cryId = CRY_OGERPON,                                                                                          \
-        .natDexNum = NATIONAL_DEX_OGERPON,                                                                             \
-        .categoryName = _("Mask"),                                                                                     \
-        .height = 12,                                                                                                  \
-        .weight = 398,                                                                                                 \
-        .description = gOgerpon##Form1##MaskPokedexText,                                                               \
-        .pokemonScale = 356,                                                                                           \
-        .pokemonOffset = 17,                                                                                           \
-        .trainerScale = 256,                                                                                           \
-        .trainerOffset = 0,                                                                                            \
-        .frontPic = gMonFrontPic_Ogerpon##Form2,                                                                       \
-        .frontPicSize = MON_COORDS_SIZE(64, 64),                                                                       \
-        .frontPicYOffset = frontYOffset,                                                                               \
-        .frontAnimFrames = sAnims_Ogerpon,                                                                             \
-        /*.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,*/                                                                   \
-        .backPic = gMonBackPic_Ogerpon##Form2,                                                                         \
-        .backPicSize = MON_COORDS_SIZE(64, 64),                                                                        \
-        .backPicYOffset = backYOffset,                                                                                 \
-        /*.backAnimId = BACK_ANIM_NONE,*/                                                                              \
-        .palette = gMonPalette_Ogerpon##Form2,                                                                         \
-        .shinyPalette = gMonShinyPalette_Ogerpon##Form2,                                                               \
-        .iconSprite = gMonIcon_Ogerpon##Form1,                                                                         \
-        .iconPalIndex = iconpalette,                                                                                   \
-        SHADOW(7, 13, SHADOW_SIZE_L)                                                                                   \
-        FOOTPRINT(Ogerpon)                                                                                             \
-        OVERWORLD(                                                                                                     \
-            sPicTable_Ogerpon##Form2,                                                                                  \
-            SIZE_32x32,                                                                                                \
-            SHADOW_SIZE_M,                                                                                             \
-            TRACKS_FOOT,                                                                                               \
-            gOverworldPalette_Ogerpon##Form2,                                                                          \
-            gShinyOverworldPalette_Ogerpon##Form2                                                                      \
-        )                                                                                                              \
-        .levelUpLearnset = sOgerponLevelUpLearnset,                                                                    \
-        .teachableLearnset = sOgerponTeachableLearnset,                                                                \
-        .formSpeciesIdTable = sOgerponFormSpeciesIdTable,                                                              \
-        .formChangeTable = sOgerponFormChangeTable,                                                                    \
-        .isLegendary = TRUE,                                                                                           \
-        .isTeraForm = isTeraform,                                                                                      \
-        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,                                                                  \
+#define OGERPON_SPECIES_INFO(Form1, Form2, type, ability, color, iconpalette, isTeraform)   \
+    {                                                                                       \
+        .baseHP        = 80,                                                                \
+        .baseAttack    = 120,                                                               \
+        .baseDefense   = 84,                                                                \
+        .baseSpeed     = 110,                                                               \
+        .baseSpAttack  = 60,                                                                \
+        .baseSpDefense = 96,                                                                \
+        .types = MON_TYPES(TYPE_GRASS, type),                                               \
+        .forceTeraType = type,                                                              \
+        .catchRate = 5,                                                                     \
+        .expYield = 275,                                                                    \
+        .evYield_Attack = 3,                                                                \
+        .genderRatio = MON_FEMALE,                                                          \
+        .eggCycles = 10,                                                                    \
+        .friendship = STANDARD_FRIENDSHIP,                                                  \
+        .growthRate = GROWTH_SLOW,                                                          \
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),                          \
+        .abilities = { ability, ABILITY_NONE },                                             \
+        .bodyColor = color,                                                                 \
+        .speciesName = _("Ogerpon"),                                                        \
+        .cryId = CRY_OGERPON,                                                               \
+        .natDexNum = NATIONAL_DEX_OGERPON,                                                  \
+        .categoryName = _("Mask"),                                                          \
+        .height = 12,                                                                       \
+        .weight = 398,                                                                      \
+        .description = gOgerpon##Form1##MaskPokedexText,                                    \
+        .pokemonScale = 356,                                                                \
+        .pokemonOffset = 17,                                                                \
+        .trainerScale = 256,                                                                \
+        .trainerOffset = 0,                                                                 \
+        .frontPic = gMonFrontPic_Ogerpon##Form1##Form2,                                     \
+        .frontPicSize = MON_COORDS_SIZE(64, 64),                                            \
+        .frontPicYOffset = 0,                                                               \
+        .frontAnimFrames = sAnims_Ogerpon,                                                  \
+        /*.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,*/                                        \
+        .backPic = gMonBackPic_Ogerpon##Form1##Form2,                                       \
+        .backPicSize = MON_COORDS_SIZE(64, 64),                                             \
+        .backPicYOffset = 0,                                                                \
+        /*.backAnimId = BACK_ANIM_NONE,*/                                                   \
+        .palette = gMonPalette_Ogerpon##Form1##Form2,                                       \
+        .shinyPalette = gMonShinyPalette_Ogerpon##Form1##Form2,                             \
+        .iconSprite = gMonIcon_Ogerpon##Form1##Mask,                                        \
+        .iconPalIndex = iconpalette,                                                        \
+        SHADOW(7, 13, SHADOW_SIZE_L)                                                        \
+        FOOTPRINT(Ogerpon)                                                                  \
+        OVERWORLD(                                                                          \
+            sPicTable_Ogerpon##Form1##Form2,                                                \
+            SIZE_32x32,                                                                     \
+            SHADOW_SIZE_M,                                                                  \
+            TRACKS_FOOT,                                                                    \
+            gOverworldPalette_Ogerpon##Form1##Form2,                                        \
+            gShinyOverworldPalette_Ogerpon##Form1##Form2                                    \
+        )                                                                                   \
+        .levelUpLearnset = sOgerponLevelUpLearnset,                                         \
+        .teachableLearnset = sOgerponTeachableLearnset,                                     \
+        .formSpeciesIdTable = sOgerponFormSpeciesIdTable,                                   \
+        .formChangeTable = sOgerponFormChangeTable,                                         \
+        .isLegendary = TRUE,                                                                \
+        .isTeraForm = isTeraform,                                                           \
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,                                       \
+        .randomizerMode = (!(isTeraform) && ((type) == TYPE_GRASS))                         \
+        ? MON_RANDOMIZER_NORMAL : MON_RANDOMIZER_INVALID,                                   \
     }
 
-    [SPECIES_OGERPON_TEAL]             = OGERPON_SPECIES_INFO(Teal,        Teal,            TYPE_GRASS, ABILITY_DEFIANT,                        BODY_COLOR_GREEN, 1, 7, 1, FALSE),
-    [SPECIES_OGERPON_WELLSPRING]       = OGERPON_SPECIES_INFO(Wellspring,  Wellspring,      TYPE_WATER, ABILITY_WATER_ABSORB,                   BODY_COLOR_BLUE,  1, 7, 0, FALSE),
-    [SPECIES_OGERPON_HEARTHFLAME]      = OGERPON_SPECIES_INFO(Hearthflame, Hearthflame,     TYPE_FIRE,  ABILITY_MOLD_BREAKER,                   BODY_COLOR_RED,   1, 7, 0, FALSE),
-    [SPECIES_OGERPON_CORNERSTONE]      = OGERPON_SPECIES_INFO(Cornerstone, Cornerstone,     TYPE_ROCK,  ABILITY_STURDY,                         BODY_COLOR_GRAY,  1, 7, 0, FALSE),
+    [SPECIES_OGERPON_TEAL]             = OGERPON_SPECIES_INFO(Teal,        Mask,     TYPE_GRASS, ABILITY_DEFIANT,                        BODY_COLOR_GREEN, 1, FALSE),
+    [SPECIES_OGERPON_WELLSPRING]       = OGERPON_SPECIES_INFO(Wellspring,  Mask,     TYPE_WATER, ABILITY_WATER_ABSORB,                   BODY_COLOR_BLUE,  0, FALSE),
+    [SPECIES_OGERPON_HEARTHFLAME]      = OGERPON_SPECIES_INFO(Hearthflame, Mask,     TYPE_FIRE,  ABILITY_MOLD_BREAKER,                   BODY_COLOR_RED,   0, FALSE),
+    [SPECIES_OGERPON_CORNERSTONE]      = OGERPON_SPECIES_INFO(Cornerstone, Mask,     TYPE_ROCK,  ABILITY_STURDY,                         BODY_COLOR_GRAY,  0, FALSE),
 #if P_TERA_FORMS
-    [SPECIES_OGERPON_TEAL_TERA]        = OGERPON_SPECIES_INFO(Teal,        TealTera,        TYPE_GRASS, ABILITY_EMBODY_ASPECT_TEAL_MASK,        BODY_COLOR_GREEN, 0, 0, 1, TRUE),
-    [SPECIES_OGERPON_WELLSPRING_TERA]  = OGERPON_SPECIES_INFO(Wellspring,  WellspringTera,  TYPE_WATER, ABILITY_EMBODY_ASPECT_WELLSPRING_MASK,  BODY_COLOR_BLUE,  0, 0, 0, TRUE),
-    [SPECIES_OGERPON_HEARTHFLAME_TERA] = OGERPON_SPECIES_INFO(Hearthflame, HearthflameTera, TYPE_FIRE,  ABILITY_EMBODY_ASPECT_HEARTHFLAME_MASK, BODY_COLOR_RED,   0, 0, 0, TRUE),
-    [SPECIES_OGERPON_CORNERSTONE_TERA] = OGERPON_SPECIES_INFO(Cornerstone, CornerstoneTera, TYPE_ROCK,  ABILITY_EMBODY_ASPECT_CORNERSTONE_MASK, BODY_COLOR_GRAY,  0, 0, 0, TRUE),
+    [SPECIES_OGERPON_TEAL_TERA]        = OGERPON_SPECIES_INFO(Teal,        MaskTera, TYPE_GRASS, ABILITY_EMBODY_ASPECT_TEAL_MASK,        BODY_COLOR_GREEN, 1, TRUE),
+    [SPECIES_OGERPON_WELLSPRING_TERA]  = OGERPON_SPECIES_INFO(Wellspring,  MaskTera, TYPE_WATER, ABILITY_EMBODY_ASPECT_WELLSPRING_MASK,  BODY_COLOR_BLUE,  0, TRUE),
+    [SPECIES_OGERPON_HEARTHFLAME_TERA] = OGERPON_SPECIES_INFO(Hearthflame, MaskTera, TYPE_FIRE,  ABILITY_EMBODY_ASPECT_HEARTHFLAME_MASK, BODY_COLOR_RED,   0, TRUE),
+    [SPECIES_OGERPON_CORNERSTONE_TERA] = OGERPON_SPECIES_INFO(Cornerstone, MaskTera, TYPE_ROCK,  ABILITY_EMBODY_ASPECT_CORNERSTONE_MASK, BODY_COLOR_GRAY,  0, TRUE),
 #endif //P_TERA_FORMS
 
 #endif //P_FAMILY_OGERPON
@@ -7841,6 +7859,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .teachableLearnset = sTerapagosTeachableLearnset,
         .formSpeciesIdTable = sTerapagosFormSpeciesIdTable,
         .formChangeTable = sTerapagosFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_TERAPAGOS_STELLAR] =
@@ -7901,6 +7920,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .teachableLearnset = sTerapagosTeachableLearnset,
         .formSpeciesIdTable = sTerapagosFormSpeciesIdTable,
         .formChangeTable = sTerapagosFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_TERAPAGOS
 
